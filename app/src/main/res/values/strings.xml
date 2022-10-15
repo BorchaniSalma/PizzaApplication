@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PizzaShunter</string>
+    <string-array name="pizzaTypes">
+        <item>Moyenne</item>
+        <item>Mini</item>
+        <item>Maxi</item>
+    </string-array>
+</resources>

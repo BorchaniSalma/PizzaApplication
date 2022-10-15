@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="118dp"
+            android:layout_height="96dp"
+            app:srcCompat="@drawable/pizza" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:hint="Nom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nomlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:hint="Prenom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/prenomlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/menu"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:hint="Type de Pizza">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/adresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:hint="Adresse">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/adresselayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="285dp"
+            android:layout_height="262dp">
+
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="121dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="37dp"
+                android:checked="false"
+                android:text="Feta"
+                app:layout_constraintEnd_toStartOf="@+id/checkBox4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="127dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:text="parmesan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="125dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:text="Raclette"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="125dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:text="bacon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="108dp"
+                android:layout_height="51dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Jambon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBox6"
+                android:layout_width="99dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="20dp"
+                android:text="Pepperoni"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/checkBox5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="113dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="166dp"
+                android:text="additions"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/textButton"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="order"
+            android:text="Order Pizza" />
+    </LinearLayout>
+</ScrollView>
+
+
+</LinearLayout>
